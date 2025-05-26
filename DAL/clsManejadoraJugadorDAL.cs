@@ -26,8 +26,8 @@ namespace DAL
             SqlCommand miComando = new SqlCommand();
 
             // Recuerda poner el tipo que corresponda (Int, Varchar, Date...)
-            miComando.Parameters.Add("@nick", SqlDbType.Int).Value = jugador.Nick;
-            miComando.Parameters.Add("@puntuacion", SqlDbType.VarChar).Value = jugador.Puntuacion;
+            miComando.Parameters.Add("@nick", SqlDbType.VarChar).Value = jugador.Nick;
+            miComando.Parameters.Add("@puntuacion", SqlDbType.Int).Value = jugador.Puntuacion;
 
             try
             {

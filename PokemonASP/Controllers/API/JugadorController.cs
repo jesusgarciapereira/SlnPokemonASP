@@ -61,7 +61,7 @@ namespace PokemonASP.Controllers.API
                 }
                 else
                 {
-                    salida = Ok(jugador);
+                    salida = Ok(numFilasAfectadas); // Manda esto en los Post
                 }
             }
             catch (Exception ex)

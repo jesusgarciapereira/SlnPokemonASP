@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ENT
@@ -18,9 +19,9 @@ namespace ENT
         public int Id
         {
             get { return id; }
-
         }
 
+        // [JsonPropertyName("nick")] // No hace falta, se llama igual
         public string Nick
         {
             get { return nick; }
@@ -30,7 +31,7 @@ namespace ENT
         public int Puntuacion
         {
             get { return puntuacion; }
-            // Es un campo calculado, no debería tener set
+            set { puntuacion = value; } // Es un campo calculado, no debería tener set. Pero debo ponérselo para hacer los Post
         }
         #endregion
 
