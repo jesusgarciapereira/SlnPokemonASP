@@ -9,15 +9,15 @@ namespace ENT
     public class clsJugador
     {
         #region Atributos
-        private int idJugador;
+        private int id;
         private string nick;
         private int puntuacion;
         #endregion
 
         #region Propiedades
-        public int IdJugador
+        public int Id
         {
-            get { return idJugador; }
+            get { return id; }
 
         }
 
@@ -39,9 +39,14 @@ namespace ENT
         { 
         }
 
-        public clsJugador(int idJugador, string nick, int puntuacion)
+        public clsJugador(int id) // Seguramente este Constructor es innecesario
         {
-            this.idJugador = idJugador;
+            this.id = id;
+        }
+
+        public clsJugador(int id, string nick, int puntuacion)
+        {
+            this.id = id;
             this.nick = nick;
             this.puntuacion = puntuacion;
         }
