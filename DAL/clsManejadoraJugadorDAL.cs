@@ -18,7 +18,7 @@ namespace DAL
         /// Post: Ninguno
         /// </summary>
         /// <returns>El número de filas afectadas</returns>
-        public static int GuardarJugador(clsJugador jugador)
+        public static int CrearJugadorDAL(clsJugador jugador)
         {
             int numeroFilasAfectadas = 0;
 
