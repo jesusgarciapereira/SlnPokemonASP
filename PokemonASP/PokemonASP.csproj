@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BLASP\BLASP.csproj" />
-    <ProjectReference Include="..\DTO\DTO.csproj" />
+    <ProjectReference Include="..\ENT\ENT.csproj" />
   </ItemGroup>
 
 </Project>

@@ -47,11 +47,21 @@ namespace DAL
                     {
                         // Crea un nuevo objeto clsJugador, verificando primero que no sea NULL ninguna Propiedad en la BD 
                         // Los cast son necesarios porque el lector devuelve objetos
-                        if (miLector["nick"] != DBNull.Value && miLector["puntuacion"] != DBNull.Value)
+                        jugador = new clsJugador((int)miLector["id"]);
+
+                        // Asigna el nick del jugador, verificando primero que no sea NULL en la BD
+                        if (miLector["nick"] != DBNull.Value )
                         {
-                            jugador = new clsJugador((int)miLector["id"], (string)miLector["nick"], (int)miLector["puntuacion"]);
-                            listadoCompletoJugadores.Add(jugador);
-                        }                  
+                            jugador.Nick = (string)miLector["nick"]; 
+                        }
+
+                        // Asigna la puntuacion del jugador, verificando primero que no sea NULL en la BD
+                        if (miLector["puntuacion"] != DBNull.Value) 
+                        {
+                            jugador.Puntuacion = (int)miLector["puntuacion"];
+                        }
+
+                        listadoCompletoJugadores.Add(jugador);
                     }
                 }
                 // Cierra el lector de datos (importante para liberar recursos)
